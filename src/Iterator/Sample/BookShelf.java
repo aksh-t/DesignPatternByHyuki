@@ -1,3 +1,5 @@
+package Sample;
+ 
 
 public class BookShelf implements Aggregate{
     private Book[] books;
