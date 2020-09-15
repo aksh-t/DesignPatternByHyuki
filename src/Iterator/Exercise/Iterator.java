@@ -1,4 +1,4 @@
-package Exercise;
+package Iterator.Exercise;
 
 public interface Iterator {
     public abstract boolean hasNext();

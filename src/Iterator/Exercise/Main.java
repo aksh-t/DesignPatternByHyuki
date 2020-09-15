@@ -1,4 +1,4 @@
-package Exercise;
+package Iterator.Exercise;
 
 public class Main {
     public static void main(String[] args) {

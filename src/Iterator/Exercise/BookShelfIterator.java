@@ -1,4 +1,4 @@
-package Exercise;
+package Iterator.Exercise;
 
 public class BookShelfIterator implements Iterator {
     private BookShelf bookShelf;
