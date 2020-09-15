@@ -1,4 +1,4 @@
-package Answer;
+package Iterator.Answer;
 
 public interface Aggregate {
     public abstract Iterator iterator();

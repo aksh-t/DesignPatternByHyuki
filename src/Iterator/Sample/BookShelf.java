@@ -1,4 +1,4 @@
-package Sample;
+package Iterator.Sample;
  
 
 public class BookShelf implements Aggregate{

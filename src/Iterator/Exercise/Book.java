@@ -1,4 +1,4 @@
-package Exercise;
+package Iterator.Exercise;
 
 public class Book {
     private String name;
