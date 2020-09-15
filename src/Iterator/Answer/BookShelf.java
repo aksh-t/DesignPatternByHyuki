@@ -10,15 +10,17 @@ public class BookShelf implements Aggregate {
     }
 
     public Book getBookAt(final int index) {
-        return (Book)books.get(index);
+        return (Book) books.get(index);
     }
 
     public void appendBook(final Book book) {
         books.add(book);
     }
+
     public int getLength() {
         return books.size();
     }
+
     public Iterator iterator() {
         return new BookShelfIterator(this);
     }

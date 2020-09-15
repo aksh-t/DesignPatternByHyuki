@@ -1,6 +1,5 @@
 package Iterator.Answer;
 
-
 public class BookShelfIterator implements Iterator {
     private final BookShelf bookShelf;
     private int index;
