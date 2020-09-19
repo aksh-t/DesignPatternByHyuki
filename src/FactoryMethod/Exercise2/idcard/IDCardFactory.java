@@ -18,7 +18,7 @@ public class IDCardFactory extends Factory {
 
     protected void registerProduct(Product product) {
         IDCard card = (IDCard) product;
-        ownersMap.put((card).getOwner(), (card).getSerialNumber());
+        ownersMap.put((card).getOwner(), Integer.valueOf((card).getSerialNumber()));
         System.out.println(ownersMap);
     }
 }
