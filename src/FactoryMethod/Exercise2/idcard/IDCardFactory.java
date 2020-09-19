@@ -11,7 +11,7 @@ public class IDCardFactory extends Factory {
     private Map<String, Integer> ownersMap = new LinkedHashMap<String, Integer>();
     private int lastSerialNumber = 0;
 
-    protected Product createProduct(String owner) {
+    protected synchronized Product createProduct(String owner) {
         this.lastSerialNumber++;
         return new IDCard(owner, this.lastSerialNumber);
     }
