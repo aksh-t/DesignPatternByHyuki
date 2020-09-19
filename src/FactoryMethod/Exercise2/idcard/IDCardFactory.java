@@ -1,0 +1,23 @@
+package FactoryMethod.Exercise2.idcard;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+import FactoryMethod.Exercise2.framework.Factory;
+import FactoryMethod.Exercise2.framework.Product;
+
+public class IDCardFactory extends Factory {
+    // 挿入順序保証するために LinkedHashMap を使ってみた
+    private Map<String, Integer> ownersMap = new LinkedHashMap<String, Integer>();
+    private int lastSerialNumber = 0;
+
+    protected Product createProduct(String owner) {
+        this.lastSerialNumber++;
+        return new IDCard(owner, this.lastSerialNumber);
+    }
+
+    protected void registerProduct(Product product) {
+        ownersMap.put(((IDCard) product).getOwner(), ((IDCard) product).getSerialNumber());
+        System.out.println(ownersMap);
+    }
+}
