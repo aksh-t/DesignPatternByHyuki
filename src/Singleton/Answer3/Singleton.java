@@ -5,6 +5,7 @@ public class Singleton {
 
     private Singleton() {
         System.out.println("インスタンスを生成しました。");
+        slowdown();
     }
 
     public static Singleton getInstance() {
@@ -12,5 +13,12 @@ public class Singleton {
             singleton = new Singleton();
         }
         return singleton;
+    }
+
+    private void slowdown() {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+        }
     }
 }
