@@ -11,7 +11,7 @@ public class TicketMaker {
         return ticketMaker;
     }
 
-    public int getNextTicketNumber() {
+    public synchronized int getNextTicketNumber() {
         return ticket++;
     }
 }
