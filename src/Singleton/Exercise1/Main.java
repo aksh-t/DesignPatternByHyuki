@@ -2,8 +2,8 @@ package Singleton.Exercise1;
 
 public class Main {
     public static void main(String[] args) {
-        TicketMaker ticketMaker1 = new TicketMaker();
-        TicketMaker ticketMaker2 = new TicketMaker();
+        TicketMaker ticketMaker1 = TicketMaker.getInstance();
+        TicketMaker ticketMaker2 = TicketMaker.getInstance();
 
         int ticket1 = ticketMaker1.getNextTicketNumber();
         int ticket2 = ticketMaker2.getNextTicketNumber();
