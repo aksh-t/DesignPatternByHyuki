@@ -18,6 +18,12 @@ public class Main {
             director.construct();
             String filename = htmlbuilder.getResult();
             System.out.println(filename + "が作成されました。");
+        } else if (args[0].equals("textfile")) {
+            TextFileBuilder textfilebuilder = new TextFileBuilder();
+            Director director = new Director(textfilebuilder);
+            director.construct();
+            String filename = textfilebuilder.getResult();
+            System.out.println(filename + "が作成されました。");
         } else {
             usage();
             System.exit(0);
@@ -27,5 +33,6 @@ public class Main {
     public static void usage() {
         System.out.println("Usage: java Main plain    プレーンテキストで文書作成");
         System.out.println("Usage: java Main html    HTMLファイルで文書作成");
+        System.out.println("Usage: java Main textfile    テキストファイルで文書作成");
     }
 }
