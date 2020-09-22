@@ -1,5 +1,7 @@
 package Builder.Exercise3;
 
+import javax.swing.JFrame;
+
 public class Main {
     public static void main(String[] args) {
         if (args.length != 1) {
@@ -24,6 +26,12 @@ public class Main {
             director.construct();
             String filename = textfilebuilder.getResult();
             System.out.println(filename + "が作成されました。");
+        } else if (args[0].equals("gui")) {
+            FrameBuilder framebuilder = new FrameBuilder();
+            Director director = new Director(framebuilder);
+            director.construct();
+            JFrame frame = framebuilder.getResult();
+            frame.setVisible(true);
         } else {
             usage();
             System.exit(0);
@@ -34,5 +42,6 @@ public class Main {
         System.out.println("Usage: java Main plain    プレーンテキストで文書作成");
         System.out.println("Usage: java Main html    HTMLファイルで文書作成");
         System.out.println("Usage: java Main textfile    テキストファイルで文書作成");
+        System.out.println("Usage: java Main gui    GUI作成");
     }
 }
